@@ -18,7 +18,11 @@ public class Author {
 	private String lastName;
 	
 	@ManyToMany(mappedBy="authors")
-	private Set<Book> books = new HashSet<>();
+	private Set<Book> books = new HashSet<>();	
+
+	public Author() {
+		super();
+	}
 
 	public Author(String firstName, String lastName) {
 		super();
@@ -93,8 +97,7 @@ public class Author {
 	@Override
 	public String toString() {
 		return "Author [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", books=" + books + "]";
-	}	
-	
+	}
 	
 
 }
